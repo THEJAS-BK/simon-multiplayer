@@ -373,6 +373,9 @@ main .footer {
   .timeANDhearts .time {
     color: white;
   }
+  .homepage {
+    height: 60vh;
+  }
 }
 @media (max-width: 450px) {
   .mainbox {
@@ -394,9 +397,25 @@ main .footer {
   .footer .name p {
     letter-spacing: 0.05rem;
   }
+  .homepagetimer .hometime {
+    height: 2.5rem;
+    width: 4rem;
+    font-size: 1rem;
+  }
 }
 @media (max-width: 230px) {
   .homepage {
     width: 50%;
+  }
+}
+@media (max-width: 1000px) {
+  .homepage {
+    height: 60vh;
+  }
+}
+@media (max-width: 720px) {
+  .homepagetimer .hometime {
+    width: 2rem;
+    font-size: 0.75rem;
   }
 }
