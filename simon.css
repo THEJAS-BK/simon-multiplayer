@@ -201,7 +201,7 @@ main .timeANDhearts {
   height: 90%;
   text-align: center;
   align-content: center;
-  font-size: 2rem;
+  font-size: fit-content;
   font-weight: 600;
   border: 5px solid black;
 }
@@ -236,7 +236,7 @@ main .footer {
 /*?Main end  */
 .result {
   height: 80vh;
-  width: 60%;
+  width: 90vh;
   background-color: #0f606b;
   margin: 50px auto;
   display: flex;
@@ -370,11 +370,15 @@ main .footer {
   .timeANDhearts .hearts .hearttwo {
     margin-right: 1rem;
   }
-  .timeANDhearts .time {
-    color: white;
-  }
   .homepage {
     height: 60vh;
+  }
+  .result h1 {
+    font-size: 2rem;
+  }
+  .result .playerres .resplayer1,
+  .resplayer2 {
+    font-size: 1rem;
   }
 }
 @media (max-width: 450px) {
@@ -417,5 +421,20 @@ main .footer {
   .homepagetimer .hometime {
     width: 2rem;
     font-size: 0.75rem;
+  }
+}
+@media (max-width: 600px) {
+  .home {
+    padding: 1rem;
+  }
+  .foot {
+    margin-top: 2rem;
+  }
+  .result {
+    margin: 2px auto;
+  }
+  .result .playerres .resplayer1,
+  .resplayer2 {
+    font-size: 0.5rem;
   }
 }
