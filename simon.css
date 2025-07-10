@@ -406,6 +406,9 @@ main .footer {
     width: 4rem;
     font-size: 1rem;
   }
+  .result {
+    width: 70%;
+  }
 }
 @media (max-width: 230px) {
   .homepage {
@@ -436,5 +439,44 @@ main .footer {
   .result .playerres .resplayer1,
   .resplayer2 {
     font-size: 0.5rem;
+  }
+}
+@media (max-width: 670px) {
+  main .gamesection {
+    display: none;
+  }
+  main .timeANDhearts {
+    display: none;
+  }
+  main .footer {
+    display: none;
+  }
+  .keyToStart {
+    display: none;
+  }
+}
+@media (max-height: 500px) {
+  .result {
+    margin: 2px auto;
+    width: 60%;
+    height: 90vh;
+  }
+  .resplayer1 .solved1,
+  .resplayer2 .solved1 {
+    font-size: 1rem;
+  }
+  .home {
+    padding: 5px;
+  }
+  .timeANDhearts .time {
+    font-size: 1rem;
+  }
+  .homepage {
+    height: 100vh;
+  }
+}
+@media (max-width: 560px) {
+  .timeANDhearts .time {
+    width: 4rem;
   }
 }
