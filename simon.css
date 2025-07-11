@@ -526,4 +526,8 @@ main .footer {
     font-size: 1rem;
     line-height: 100%;
   }
+  .homepage {
+    margin: 1px auto;
+    height: 50%;
+  }
 }
