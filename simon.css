@@ -500,8 +500,11 @@ main .footer {
   .keyToStart {
     display: none;
   }
-  .gamePlayRules{
-    display:none
+  .gamePlayRules {
+    display: none;
+  }
+  .result {
+    display: none;
   }
 }
 @media (max-height: 500px) {
