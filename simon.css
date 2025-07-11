@@ -7,7 +7,7 @@
 .homepage {
   height: 80vh;
   width: 40%;
-  background-color: #227c9d;
+  background-color: #1e88e5;
   margin: 50px auto;
   display: flex;
   flex-direction: column;
@@ -18,7 +18,7 @@
   text-align: center;
   margin-top: 1rem;
   font-size: 2rem;
-  color: #c1ff72;
+  color: #ffeb3b;
   word-spacing: 0.25rem;
   letter-spacing: 3px;
 }
@@ -36,7 +36,7 @@
   padding: 0.5rem 0;
   border: none;
   border-radius: 1rem;
-  background-color: #ffcb77;
+  background-color: #ffc107;
   text-align: center;
   outline: none;
 }
@@ -52,7 +52,7 @@
 .homepage .homepagetimer .timerp {
   width: 10%;
   font-size: 140%;
-  color: #c1ff72;
+  color: #ffeb3b;
 }
 .homepage .homepagetimer .timebox {
   display: flex;
@@ -62,13 +62,14 @@
   margin-left: 20%;
 }
 .hometime {
-  background-color: #17c3b2;
+  background-color: #03dac5;
   align-content: center;
   cursor: pointer;
   border-radius: 1rem;
   height: 2rem;
   width: 4rem;
   text-align: center;
+  font-weight: 600;
 }
 .homepage .startbtn {
   margin-top: 2rem;
@@ -79,8 +80,8 @@
   letter-spacing: 0.2rem;
   border: none;
   border-radius: 1rem;
-  background-color: chocolate;
-  color: #c1ff72;
+  background-color: #ff5722;
+  color: #ffffff;
 }
 .timeclick {
   border: 3px solid orange;
@@ -107,9 +108,10 @@
 }
 .gameover {
   position: absolute;
-  background-color: lightblue;
+  font-weight: 700;
   font-size: 4rem;
   top: 35%;
+  color: red;
 }
 .gamePlayRules {
   position: absolute;
@@ -120,7 +122,7 @@
   align-items: center;
 }
 .gamePlayContainer {
-  background-color: lightblue;
+  background-color: #b3e5fc;
   height: 50%;
   width: 50%;
   list-style-position: inside;
@@ -133,17 +135,22 @@
 }
 .gamePlayContainer ul li {
   line-height: 2rem;
+  color: #263238;
 }
 .gamePlayContainer button {
   margin-top: 1rem;
   padding: 0.75rem 1rem;
   border: none;
   border-radius: 1rem;
+  background-color: #ff6f61;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 #gamePlayHead {
   margin-bottom: 1rem;
   font-size: 1.5rem;
   font-weight: 600;
+  color: #0d47a1;
 }
 .gamePlayHead main {
   width: 100%;
@@ -187,7 +194,7 @@ main .gamesection .centerbox {
 main .gamesection .centerbox .box {
   height: 100%;
   width: 48%;
-  background-color: #ffcb77;
+  background-color: #00b0ff;
 }
 .centerbox .line {
   background-color: black;
@@ -247,14 +254,16 @@ main .footer {
 }
 .footer .name {
   width: 30%;
-  background-color: #ffcb77;
   height: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .footer .name p {
-  letter-spacing: 0.2rem;
+  padding: 0.75rem 4rem;
+  background-color: lightblue;
+  font-weight: 600;
+  border-radius: 2rem;
 }
 
 .footer .centericon button {
@@ -271,11 +280,11 @@ main .footer {
 .result {
   height: 80vh;
   width: 90vh;
-  background-color: #0f606b;
+  background-color: #1e88e5;
   margin: 50px auto;
   display: flex;
   flex-direction: column;
-  color: #adf1d2;
+  border-radius: 3rem;
 }
 .result h1 {
   text-align: center;
@@ -283,11 +292,13 @@ main .footer {
   margin-top: 1rem;
   font-size: 4rem;
   letter-spacing: 0.25rem;
+  color: #ffeb3b;
 }
 .result .playerres {
   height: 35%;
   display: flex;
   width: 100%;
+  color: #eceff1;
 }
 .result .playerres .resplayer1,
 .resplayer2 {
@@ -307,6 +318,7 @@ main .footer {
 .resplayer2 .solved {
   margin-top: 0.9rem;
   font-size: 2rem;
+  color: #ffd54f;
 }
 .result .playerhearts {
   height: 10%;
@@ -347,7 +359,7 @@ main .footer {
   background-color: red;
 }
 .selected {
-  border: 3px solid yellow;
+  border: 3px solid #ffeb3b;
 }
 .blur {
   filter: blur(5px);
@@ -529,5 +541,10 @@ main .footer {
   .homepage {
     margin: 1px auto;
     height: 50%;
+  }
+}
+@media (max-width: 900px) {
+  .gameover {
+    font-size: 3rem;
   }
 }

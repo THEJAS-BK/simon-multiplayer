@@ -17,11 +17,12 @@ let player1_num = 0;
 let player2_num = 0;
 let gamePlayRules = document.querySelector(".gamePlayRules");
 let gameRulesBtn = document.querySelector(".start");
+let player1_lock = false;
+let player2_lock = false;
 let removedRules = false;
 function isTouchDevice() {
   return "ontouchstart" in window || navigator.maxTouchPoints > 0;
 }
-
 homestartbtn.addEventListener("click", () => {
   if (player1.value != "" && player2.value != "") {
     players_Gamenames();
@@ -42,8 +43,8 @@ homestartbtn.addEventListener("click", () => {
         gameRulesBtn.addEventListener("click", () => {
           gamePlayRules.classList.add("DisplayNone");
           removedRules = true;
+          gameSection();
         });
-        gameSection();
       }, 250);
     }
   }
@@ -110,28 +111,30 @@ function startGameOnceTouch() {
 }
 
 function setupTouchControls() {
-  body.addEventListener("touchstart", startGameOnceTouch, { once: true });
-  let allButtons = document.querySelectorAll(".mainbox1, .mainbox2");
-  allButtons.forEach((btn) => {
-    btn.addEventListener("touchstart", (e) => {
-      e.preventDefault();
-      if (!start) return;
+  if (removedRules == true) {
+    body.addEventListener("touchstart", startGameOnceTouch, { once: true });
+    let allButtons = document.querySelectorAll(".mainbox1, .mainbox2");
+    allButtons.forEach((btn) => {
+      btn.addEventListener("touchstart", (e) => {
+        e.preventDefault();
+        if (!start) return;
 
-      const key = btn.getAttribute("data-key");
+        const key = btn.getAttribute("data-key");
 
-      if (legalkeys1.includes(key) && !player1_gameover) {
-        flashgreen(btn);
-        player1_series.push(btn.innerText);
-        player1_test();
-      }
+        if (legalkeys1.includes(key) && !player1_gameover) {
+          flashgreen(btn);
+          player1_series.push(btn.innerText);
+          player1_test();
+        }
 
-      if (legalkeys2.includes(key) && !player2_gameover) {
-        flashgreen(btn);
-        player2_series.push(btn.innerText);
-        player2_test();
-      }
+        if (legalkeys2.includes(key) && !player2_gameover) {
+          flashgreen(btn);
+          player2_series.push(btn.innerText);
+          player2_test();
+        }
+      });
     });
-  });
+  }
 }
 
 function startGameOnce(ev) {
@@ -219,6 +222,7 @@ let player2_solvpattern = 0;
 let curpattern1 = 0;
 let curpattern2 = 0;
 function player1_test() {
+  if (player1_lock) return;
   let idx = player1_series.length - 1;
   if (player1_series[idx] === player1_gameseries[idx]) {
     if (player1_series.length === player1_gameseries.length) {
@@ -230,10 +234,14 @@ function player1_test() {
       player1_centerboxes();
     }
   } else {
+    player1_lock = true;
     let red = document.querySelector(".gameone");
     flashred(red);
     player1_gameseries = [];
-    setTimeout(player1Game, 1000);
+    setTimeout(() => {
+      player1Game();
+      player1_lock = false;
+    }, 1000);
     removehearts1();
     curpattern1 = 0;
     remove_centerboxes(player1_box);
@@ -252,6 +260,7 @@ function player1_test() {
   }
 }
 function player2_test() {
+  if (player2_lock) return;
   let idx = player2_series.length - 1;
   if (player2_series[idx] === player2_gameseries[idx]) {
     if (player2_series.length === player2_gameseries.length) {
@@ -263,10 +272,14 @@ function player2_test() {
       player2_centerboxes();
     }
   } else {
+    player2_lock = true;
     let red = document.querySelector(".gametwo");
     flashred(red);
     player2_gameseries = [];
-    setTimeout(player2Game, 1000);
+    setTimeout(() => {
+      player2Game();
+      player2_lock = false;
+    }, 1000);
     removehearts2();
     curpattern2 = 0;
     remove_centerboxes2(player2_box);
