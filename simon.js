@@ -15,6 +15,9 @@ let player1_box = document.querySelector(".box1");
 let player2_box = document.querySelector(".box2");
 let player1_num = 0;
 let player2_num = 0;
+let gamePlayRules = document.querySelector(".gamePlayRules");
+let gameRulesBtn = document.querySelector(".start");
+let removedRules = false;
 function isTouchDevice() {
   return "ontouchstart" in window || navigator.maxTouchPoints > 0;
 }
@@ -36,6 +39,10 @@ homestartbtn.addEventListener("click", () => {
       clock.innerText = `${beforetime}:59`;
       setTimeout(() => {
         main.classList.remove("DisplayNone");
+        gameRulesBtn.addEventListener("click", () => {
+          gamePlayRules.classList.add("DisplayNone");
+          removedRules = true;
+        });
         gameSection();
       }, 250);
     }
@@ -128,14 +135,16 @@ function setupTouchControls() {
 }
 
 function startGameOnce(ev) {
-  if (ev.code == "Space") {
-    presskey.classList.add("DisplayNone");
-    start = true;
-    levelup();
-    if (clockstatus == true) {
-      clockTime();
+  if (removedRules == true) {
+    if (ev.code == "Space") {
+      presskey.classList.add("DisplayNone");
+      start = true;
+      levelup();
+      if (clockstatus == true) {
+        clockTime();
+      }
+      body.addEventListener("keydown", startGameOnce);
     }
-    body.addEventListener("keydown", startGameOnce);
   }
 }
 
