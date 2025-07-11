@@ -40,6 +40,9 @@ homestartbtn.addEventListener("click", () => {
       clock.innerText = `${beforetime}:59`;
       setTimeout(() => {
         main.classList.remove("DisplayNone");
+        if (window.innerWidth < 670) {
+          alert("please rotate your phone");
+        }
         gameRulesBtn.addEventListener("click", () => {
           gamePlayRules.classList.add("DisplayNone");
           removedRules = true;
@@ -94,9 +97,6 @@ const legalkeys2 = ["9", "8", "0", "-"];
 
 function gameSection() {
   if (isTouchDevice()) {
-    if (window.innerWidth < 670) {
-      alert("please rotate your phone");
-    }
     document.querySelector(".startmsg").innerText = "Tap anywhere to start";
     setupTouchControls();
   } else {
