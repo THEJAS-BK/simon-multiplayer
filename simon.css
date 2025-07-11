@@ -428,32 +428,15 @@ main .footer {
   }
 }
 @media (max-width: 450px) {
-  .mainbox {
-    border: 4px solid black;
-  }
-  .timeANDhearts .hearts .heartone {
-    font-size: 1rem;
-  }
-  .timeANDhearts .hearts .hearttwo {
-    font-size: 1rem;
-  }
-  .timeANDhearts .time {
-    width: 5rem;
-  }
-  .footer .centericon button {
-    padding: 0.5rem 1rem;
-    margin: 0 2rem;
-  }
-  .footer .name p {
-    letter-spacing: 0.05rem;
-  }
   .homepagetimer .hometime {
-    height: 2.5rem;
-    width: 4rem;
+    width: 3rem;
     font-size: 1rem;
   }
   .result {
     width: 70%;
+  }
+  .homepage {
+    width: 70% !important;
   }
 }
 @media (max-width: 230px) {
@@ -527,9 +510,9 @@ main .footer {
     height: 100vh;
   }
 }
-@media (max-width: 560px) {
-  .timeANDhearts .time {
-    width: 4rem;
+@media (max-width: 575px) {
+  .homepage .homepagetimer .hometime {
+    width: 3rem;
   }
 }
 @media (max-height: 560px) {
@@ -552,5 +535,13 @@ main .footer {
 @media (max-width: 900px) {
   .gameover {
     font-size: 3rem;
+  }
+}
+@media (max-width: 730px) {
+  .homepage {
+    width: 50%;
+  }
+  .homepagetimer .hometime {
+    width: 4rem;
   }
 }
