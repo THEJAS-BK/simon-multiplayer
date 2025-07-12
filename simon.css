@@ -245,6 +245,7 @@ main .timeANDhearts {
   font-size: fit-content;
   font-weight: 600;
   border: 5px solid black;
+  font-size: 2rem;
 }
 main .footer {
   flex: 1;
@@ -392,9 +393,6 @@ main .footer {
 @media (max-width: 1000px) {
   main .gamsection .mainplayer1 {
     gap: 2rem;
-  }
-  .timeANDhearts .time {
-    font-size: 1.5rem;
   }
   .homepage .startbtn .homepage-startbtn {
     padding: 0.75rem;
