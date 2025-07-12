@@ -1,4 +1,6 @@
-# 🟢 Simon Multiplayer Game
+# Simon Multiplayer Game
+
+#Game https://thejas-bk.github.io/simon-multiplayer/
 
 A two-player version of the classic Simon memory game. Built with *HTML, **CSS, and **JavaScript* — with full support for *keyboard* and *touch* input.
 
