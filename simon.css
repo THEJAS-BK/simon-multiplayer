@@ -530,6 +530,9 @@ main .footer {
     margin: 1px auto;
     height: 50%;
   }
+  .homepage .homepageinp .inps {
+    margin-top: 0.25rem;
+  }
 }
 @media (max-width: 900px) {
   .gameover {
