@@ -607,3 +607,14 @@ main .footer {
     width: 4rem;
   }
 }
+@media (max-width: 420px) {
+  .homepage {
+    width: 90% !important;
+  }
+  .homepage .homepagetimer .timebox {
+    width: 60%;
+  }
+  .homepage .startbtn .homepage-startbtn {
+    padding: 0.75rem;
+  }
+}
