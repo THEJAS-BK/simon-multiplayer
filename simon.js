@@ -411,7 +411,7 @@ function checkwinner() {
   } else if (player1_solvpattern == player2_solvpattern) {
     winnerName.innerText = "DRAW";
   } else {
-    winnerName.innerText = `${player2.value}`;
+    winnerName.innerText = `${player2.value} Wins!!!`;
     player2_solvpattern;
   }
   player1resName.innerText = player1.value;
