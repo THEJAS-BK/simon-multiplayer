@@ -2,33 +2,36 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
+  font-weight: 400;
+  font-style: normal;
 }
 
 .homepage {
   height: 80vh;
   width: 40%;
-  background-color: #1e88e5;
+  background-color: #1b1b2f;
   margin: 50px auto;
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
   align-items: center;
+  font-family: "Bungee Spice", sans-serif;
 }
 .homepage h1 {
   text-align: center;
   margin-top: 1rem;
   font-size: 2rem;
-  color: #ffeb3b;
+  color: #ffd54f;
   word-spacing: 0.25rem;
   letter-spacing: 3px;
 }
 .homepage .homepageinp {
-  margin-top: 1rem;
-  height: 40%;
+  margin-top: 2rem;
+  height: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
 }
 .homepage .homepageinp .inps {
   font-size: 1.5rem;
@@ -36,9 +39,13 @@
   padding: 0.5rem 0;
   border: none;
   border-radius: 1rem;
-  background-color: #ffc107;
+  background-color: light-dark(rgb(232, 240, 254));
   text-align: center;
   outline: none;
+  margin-top: 1rem;
+  height: 40%;
+  font-weight: 700;
+  color: #333333;
 }
 .homepage .homepagetimer {
   display: flex;
@@ -53,6 +60,7 @@
   width: 10%;
   font-size: 140%;
   color: #ffeb3b;
+  font-family: "Bungee Spice", sans-serif;
 }
 .homepage .homepagetimer .timebox {
   display: flex;
@@ -62,7 +70,7 @@
   margin-left: 20%;
 }
 .hometime {
-  background-color: #03dac5;
+  background-color: #00bcd4;
   align-content: center;
   cursor: pointer;
   border-radius: 1rem;
@@ -70,9 +78,17 @@
   width: 4rem;
   text-align: center;
   font-weight: 600;
+  /* display: flex; */
+  align-content: center;
 }
-.homepage .startbtn {
+.hometime .homepage .startbtn {
   margin-top: 2rem;
+}
+#last {
+  font-size: 0.75rem;
+}
+.homepage .homepageinp .inps::placeholder {
+  color: #bdbdbd;
 }
 .homepage .startbtn .homepage-startbtn {
   padding: 1rem 2rem;
@@ -80,8 +96,9 @@
   letter-spacing: 0.2rem;
   border: none;
   border-radius: 1rem;
-  background-color: #ff5722;
+  background-color: #ff7043;
   color: #ffffff;
+  font-weight: bold;
 }
 .timeclick {
   border: 3px solid orange;
@@ -96,15 +113,16 @@
   align-items: center;
 }
 .keyStart {
-  background-color: grey;
+  background: linear-gradient(135deg, #1e88e5, #8e24aa);
   height: 30%;
   width: 40%;
   align-content: center;
   text-align: center;
   font-size: 2rem;
   letter-spacing: 0.15rem;
-  color: white;
+  color: #ffffff;
   border-radius: 1rem;
+  font-family: "Orbitron", sans-serif;
 }
 .gameover {
   position: absolute;
@@ -132,25 +150,27 @@
   justify-content: center;
   font-size: 1.25rem;
   border-radius: 2rem;
+  font-family: "poppins";
 }
 .gamePlayContainer ul li {
   line-height: 2rem;
-  color: #263238;
+  color: #333333;
 }
 .gamePlayContainer button {
   margin-top: 1rem;
   padding: 0.75rem 1rem;
   border: none;
   border-radius: 1rem;
-  background-color: #ff6f61;
+  background-color: #ff7043;
   color: #ffffff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
 }
 #gamePlayHead {
   margin-bottom: 1rem;
   font-size: 1.5rem;
-  font-weight: 600;
-  color: #0d47a1;
+  font-weight: 700;
+  color: #1565c0;
 }
 .gamePlayHead main {
   width: 100%;
@@ -183,18 +203,19 @@ main .gamesection .centerbox {
 .mainbox {
   height: 42%;
   width: 37%;
-  background-color: #919191;
+  background-color: #607d8b;
   border-radius: 2rem;
-  border: 1rem solid black;
+  border: 1rem solid #263238;
   align-content: center;
   text-align: center;
   font-size: 2rem;
   color: white;
+  font-family: "Poppins", sans-serif;
 }
 main .gamesection .centerbox .box {
   height: 100%;
   width: 48%;
-  background-color: #00b0ff;
+  background: linear-gradient(to bottom, #00acc1, #4fc3f7);
 }
 .centerbox .line {
   background-color: black;
@@ -238,14 +259,19 @@ main .timeANDhearts {
   margin-right: 3rem;
 }
 .timeANDhearts .time {
+  background-color: #1e1e2f;
+  color: #ffeb3b;
+  font-family: "Orbitron", sans-serif;
   width: 9.5rem;
   height: 90%;
   text-align: center;
   align-content: center;
   font-size: fit-content;
   font-weight: 600;
-  border: 5px solid black;
+  border: none;
   font-size: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
 }
 main .footer {
   flex: 1;
@@ -262,30 +288,36 @@ main .footer {
 }
 .footer .name p {
   padding: 0.75rem 4rem;
-  background-color: lightblue;
+  background-color: #b3e5fc;
+  color: #263238;
   font-weight: 600;
   border-radius: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .footer .centericon button {
   padding: 0.9rem 1.9rem;
   border: none;
-  background-color: #fe6d73;
+  background-color: #f44336;
   color: white;
   border-radius: 1rem;
   letter-spacing: 0.2rem;
   margin: 0 6rem;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
 }
 
 /*?Main end  */
 .result {
   height: 80vh;
   width: 90vh;
-  background-color: #1e88e5;
+  background: #26263a;
   margin: 50px auto;
   display: flex;
   flex-direction: column;
   border-radius: 3rem;
+  font-family: "Orbitron", sans-serif;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 .result h1 {
   text-align: center;
@@ -294,12 +326,16 @@ main .footer {
   font-size: 4rem;
   letter-spacing: 0.25rem;
   color: #ffeb3b;
+  font-weight: bold;
+  font-family: "Press Start 2P", cursive;
+
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
 }
 .result .playerres {
   height: 35%;
   display: flex;
   width: 100%;
-  color: #eceff1;
+  color: #03a9f4;
 }
 .result .playerres .resplayer1,
 .resplayer2 {
@@ -318,8 +354,8 @@ main .footer {
 .resplayer1 .solved,
 .resplayer2 .solved {
   margin-top: 0.9rem;
-  font-size: 2rem;
-  color: #ffd54f;
+  font-size: 4rem;
+  color: #00e676;
 }
 .result .playerhearts {
   height: 10%;
@@ -361,7 +397,7 @@ main .footer {
   background-color: red;
 }
 .selected {
-  border: 3px solid #ffeb3b;
+  background-color: rgb(61, 237, 61);
 }
 .blur {
   filter: blur(5px);
