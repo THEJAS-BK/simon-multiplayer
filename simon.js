@@ -49,6 +49,8 @@ homestartbtn.addEventListener("click", () => {
           gameSection();
         });
       }, 250);
+    } else {
+      alert("Please fill the parameters and select timer.");
     }
   } else {
     alert(" Please fill the parameters and select timer.");
