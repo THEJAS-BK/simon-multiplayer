@@ -178,7 +178,6 @@ function player1Game() {
   flashgreen(btnw);
   player1_gameseries.push(btnw.innerText);
 }
-
 body.addEventListener("keydown", (ev) => {
   if (start !== true || player1_lock) return;
   for (let key of legalkeys1) {
