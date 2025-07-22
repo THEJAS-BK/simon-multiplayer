@@ -211,6 +211,7 @@ main .gamesection .centerbox {
   font-size: 2rem;
   color: white;
   font-family: "Poppins", sans-serif;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 main .gamesection .centerbox .box {
   height: 100%;
@@ -392,6 +393,9 @@ main .footer {
 
 .flashgreen {
   background-color: lightgreen;
+}
+.flashbrown {
+  background-color: #a0522d;
 }
 .flashred {
   background-color: red;

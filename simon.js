@@ -122,15 +122,12 @@ function setupTouchControls() {
       btn.addEventListener("touchstart", (e) => {
         e.preventDefault();
         if (!start) return;
-
         const key = btn.getAttribute("data-key");
-
         if (legalkeys1.includes(key) && !player1_gameover) {
           flashgreen(btn);
           player1_series.push(btn.innerText);
           player1_test();
         }
-
         if (legalkeys2.includes(key) && !player2_gameover) {
           flashgreen(btn);
           player2_series.push(btn.innerText);
@@ -166,6 +163,12 @@ function flashgreen(btn) {
     btn.classList.remove("flashgreen");
   }, 250);
 }
+function flashbrown(btn) {
+  btn.classList.add("flashbrown");
+  setTimeout(() => {
+    btn.classList.remove("flashbrown");
+  }, 350);
+}
 function flashred(btn) {
   btn.classList.add("flashred");
   setTimeout(() => {
@@ -177,7 +180,7 @@ function player1Game() {
   let idx = Math.floor(Math.random() * 4);
   let btncolor = player1_idx[idx];
   let btnw = document.querySelector(`.${btncolor}`);
-  flashgreen(btnw);
+  flashbrown(btnw);
   player1_gameseries.push(btnw.innerText);
 }
 body.addEventListener("keydown", (ev) => {
@@ -197,7 +200,7 @@ function player2Game() {
   let idx = Math.floor(Math.random() * 4);
   let btncolor = player2_idx[idx];
   let btnw = document.querySelector(`.${btncolor}`);
-  flashgreen(btnw);
+  flashbrown(btnw);
   player2_gameseries.push(btnw.innerText);
 }
 
