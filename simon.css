@@ -529,7 +529,8 @@ main .footer {
     display: none;
   }
   .homepage {
-    width: 60% !important;
+    width: 76% !important;
+    height: 60vh !important;
   }
 }
 @media (max-height: 500px) {
