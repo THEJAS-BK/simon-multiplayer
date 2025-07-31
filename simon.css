@@ -552,6 +552,11 @@ main .footer {
     height: 100vh;
   }
 }
+@media (max-height: 400px) {
+  .homepage {
+    height: 120vh !important;
+  }
+}
 @media (max-width: 575px) {
   .homepage .homepagetimer .hometime {
     width: 3rem;
@@ -576,8 +581,8 @@ main .footer {
     line-height: 100%;
   }
   .homepage {
-    margin: 1px auto;
-    height: 60vh;
+    margin: 10px auto;
+    height: 80vh;
   }
   .homepage .homepageinp .inps {
     margin-top: 0.25rem;

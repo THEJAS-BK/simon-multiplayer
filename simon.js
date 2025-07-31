@@ -248,7 +248,6 @@ function player1_test() {
     remove_centerboxes(player1_box);
     player1_num = 0;
     let allTempBtns = document.querySelectorAll(".mainbox1");
-    allTempBtns.forEach((el) => el.classList.add("DisplayNone"));
     setTimeout(() => {
       if (player1_removedhearts !== 3) {
         player1Game();
@@ -289,16 +288,13 @@ function player2_test() {
     remove_centerboxes2(player2_box);
     player2_num = 0;
     let allTempBtns = document.querySelectorAll(".mainbox2");
-    allTempBtns.forEach((el) => {
-      el.classList.add("DisplayNone");
-      setTimeout(() => {
-        if (player2_removedhearts != 3) {
-          allTempBtns.forEach((el) => {
-            el.classList.remove("DisplayNone");
-          });
-        }
-      }, 260);
-    });
+    setTimeout(() => {
+      if (player2_removedhearts != 3) {
+        allTempBtns.forEach((el) => {
+          el.classList.remove("DisplayNone");
+        });
+      }
+    }, 260);
   }
 }
 // Clock
