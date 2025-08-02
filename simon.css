@@ -608,6 +608,9 @@ main .footer {
   .gameover {
     font-size: 3rem;
   }
+  .homepage h1 {
+    font-size: 2rem;
+  }
 }
 @media (max-width: 730px) {
   .homepage {
@@ -626,5 +629,10 @@ main .footer {
   }
   .homepage .startbtn .homepage-startbtn {
     padding: 0.75rem;
+  }
+}
+@media (max-width: 1200px) {
+  .homepage {
+    width: 40%;
   }
 }
